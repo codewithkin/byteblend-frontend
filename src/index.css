@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    overflow-x: hidden
+}
+
+body {
+    --color-primary: #2e86ab;
+}
+
+a.active {
+    border-bottom: 2px solid var(--color-primary);
+}
+
+a.active svg {
+    fill: #2e86ab
+}
