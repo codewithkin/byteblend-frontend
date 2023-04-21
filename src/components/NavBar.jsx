@@ -7,7 +7,7 @@ import Home from '../pages/Home';
 
 const NavBar = () => {
     return ( 
-        <nav className='absolute bg-white w-full'>
+        <nav className='absolute bg-white w-full shadow-md'>
             <section className='flex gap-6 justify-center align-middle p-4 '>
                 <NavLink to='/'>
                     <AiOutlineHome size={40} fill="gray"/>
