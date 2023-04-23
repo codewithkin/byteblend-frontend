@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import { BsSend } from 'react-icons/bs';
 import {TiTick} from 'react-icons/ti';
 import {MdClose} from "react-icons/md";
@@ -14,7 +14,7 @@ const NewPost = () => {
                 poster: {
                     name: "Karma Marikomo",
                     username: "karley",
-                    profileImageUrl: "../assets/karma.jpg"
+                    profileImageUrl: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJvc2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                 },
                 contents: contents,
                 liked: true

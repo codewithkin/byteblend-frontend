@@ -15,8 +15,8 @@ const Post = ({poster, contents}) => {
     }
 
     return ( 
-        <section className='p-3 w-full'>
-            <section className="shadow-3xl grid justify-center items-center my-3 w-full">
+        <section className='lg:mt-6 lg:mb-6 lg:p-5 w-full'>
+            <section className="shadow-3xl grid my-3 w-full">
             <article className='p-4 flex gap-2 justify-center align-center items-center'>
                 <img src={profileImageUrl} alt={`${username}'s profile picture`} className='w-[3rem] h-[3rem] rounded-full'/>
 
