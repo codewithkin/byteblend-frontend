@@ -11,12 +11,15 @@ const NavBar = () => {
     const {posts} = useContext(PostsContext);
     const [searchTerm, setTerm] = useState("");
 
+    const handleSearch = () => {
+        console.log(posts.content)
+    }
     return ( 
         <nav className='absolute bg-white w-full shadow-md flex justify-between items-center'>
             <section className='lg:block hidden border-gray-300 border  lg:ml-10 lg:flex justify-between items-center pr-10'>
                 <input 
                 value={searchTerm}
-                onChange={(e) => setTerm(e.target.value)}
+                onChange={(e) => {setTerm(e.target.value); handleSearch}}
                 type="search" className='px-12 py-2 outline-none'
                 placeholder="Make a query..." />
                 <CiSearch size="25" fill="gray"/>
