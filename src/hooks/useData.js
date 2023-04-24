@@ -4,7 +4,7 @@ export default function useData(endpoint) {
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState();
 
-  const fetchData = () => {
+  const fetchData = async () => {
     return new Promise((resolve, reject) => {
      startTransition(() => fetch(endpoint)
         .then((response) => response.json())

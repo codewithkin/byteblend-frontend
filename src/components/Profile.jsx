@@ -14,9 +14,9 @@ const Profile = () => {
     const {name, username, profileImageUrl, followers, following, bio,backgroundImage } = user;
 
     return ( 
-        <article className='flex flex-col lg:w-[33.3%]'>
+        <article className='flex flex-col lg:w-[30%]'>
             <section
-            className='w-full p-4 text-center gap-4 grid'
+            className='w-full px-4 text-center gap-4 grid'
             style={{
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundPosition: 'center',

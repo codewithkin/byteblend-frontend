@@ -1,14 +1,17 @@
 import Feed from "../components/Feed";
 import Profile from '../components/Profile';
-import Search from "../components/Search";
+import PostsContextProvider from "../context/PostsContext";
+import Chat from "./Chat";
 
 const Home = () => {
     return ( 
-        <article className="home">
-            <section className="lg:flex lg:gap-2">
-                <Profile/>
-                <Feed />
-                <Search />
+        <article className="home lg:py-20 ">
+            <section className="lg:flex mt-0 lg:gap-2">
+                <PostsContextProvider>
+                    <Profile/>
+                    <Feed />
+                    <Chat />
+                </PostsContextProvider>
             </section>
         </article>
      );

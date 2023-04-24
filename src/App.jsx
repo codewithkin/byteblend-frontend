@@ -6,13 +6,15 @@ import Chat from './pages/Chat';
 import Profile from './components/Profile';
 import Settings from './pages/Settings';
 import PageNotFound from './components/PageNotFound';
+import PostsContextProvider from './context/PostsContext';
 
 function App() {
 
   return (
-    <section className='h-[100vh]'>
-      <NavBar />
-      <h1 className='text-sky-600 text-3xl font-bold font-arial text-center p-4 mt-20'>Byteblend</h1>
+    <section className='h-[100vh] lg:overflow-hidden'>
+      <PostsContextProvider>
+        <NavBar />
+      </PostsContextProvider>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/posts/new' element={<NewPost/>} />

@@ -1,26 +1,23 @@
-import { useEffect, useState, useTransition } from "react";
-import useData from "../hooks/useData";
+import { useContext, useEffect, useState, useTransition } from "react";
 import Post from "./Post";
-import NavBar from "./NavBar";
+import { PostsContext } from "../context/PostsContext";;
 
 
 const Posts = () => {
-    const [ posts, setPosts ] = useState([]);
-    const { fetchData, error, isPending } = useData('http://localhost:4000/api/byteblend/');
-    useEffect(() => {
-        if(isPending) {
-            setPosts("Loading...")
-        }
-        fetchData().then((data) => { setPosts(data.posts); })
-    }, [])
+    const { posts } = useContext(PostsContext);
 
     return ( 
-        <section className="p-2">
-            {
-            posts.map(post => {                
-                return(<Post poster={post.poster} contents={post.contents} key={Math.random()}/>)
-            })
-        }
+        <section className="px-2">
+            <article className="flex flex-col">
+                <h2 className="text-2xl font-bold text-center text-gray-400">Trending posts today</h2>
+                {
+                    posts.length == 0 ?
+                    <h1 className="text-3xl text-gray-400 text-center overflow-hidden self-center justify-self-center` font-bold">Loading...</h1> :
+                    posts.map(post => {                
+                        return(<Post poster={post.poster} contents={post.contents} key={Math.random()}/>)
+                    })
+                }
+            </article>
         </section>
      );
 }
