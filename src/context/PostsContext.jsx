@@ -5,7 +5,7 @@ export const PostsContext = createContext();
 
 const PostsContextProvider = (props) => {
     const [ posts, setPosts ] = useState([]);
-    const { fetchData, error } = useData('http://localhost:4000/api/byteblend/');
+    const { fetchData, error } = useData('https://byteblend-social-net-api-onrender-com.onrender.com');
     useEffect(() => {
             fetchData().then((data) => { setPosts(data.posts); });
     }, [])
